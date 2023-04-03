@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dtox</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="dtox" />
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="plugins/Venobox/venobox.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!--slider product swiffy-->
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+
+  <style>
+    #sidenav {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100%;
+      background-color: white;
+      z-index: 2000;
+      border: 1px solid white;
+      border-radius: 17px 0px 0px 17px;
+      transition: 1s;
+
+
+    }
+  </style>
+
+  <style>
+    .accordion {
+      background-color: rgb(192 240 231 / 48%);
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: right;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+      direction: rtl;
+
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #22d3d8d9;
+      direction: rtl;
+
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      text-align: right !important;
+
+    }
+
+
+    .modal-wrapper {
+      background-color: rgba(123, 223, 227, 0.694);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: 2000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .modal-register {
+      width: 550px;
+      height: 450px;
+      background-color: white;
+      border: 5px solid white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+
+    }
+
+    .modal-registerto {
+      width: 450px;
+      height: 250px;
+      background-color: white;
+      border: 5px solid white;
+      padding: 2px;
+      align-items: center;
+
+    }
+
+    .inputregister {
+      display: block;
+      padding: 4px 8px;
+      border-radius: 5px;
+      margin: 18px 5px;
+      width: 100%;
+    }
+
+
+
+
+    #selectshoes {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+
+      background-image: linear-gradient(25deg, rgb(23, 255, 211) 0%, rgb(211, 252, 113) 95%);
+      color: #091337;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+      font-size: 17px;
+    }
+
+    #selectshoes.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @-webkit-keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!--sidenav-->
+
+  <div id="sidenav">
+    <div class="d-flex justify-content-between">
+      <div id="sc" style=" cursor: pointer; padding: 8px 15px;"><img src="images/close (1).png"
+          style="width: 20px; height: 20px; " alt=""></div>
+      <div style="padding: 10px 16px 6px 10px;" class="mb-4 mt-3">
+        <h3>Menu</h3>
+      </div>
+    </div>
+
+
+    <button class="accordion">Woman</button>
+    <div class="panel">
+      <ul>
+        <li>work</li>
+        <li>sport</li>
+        <li>Official</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Man</button>
+    <div class="panel">
+      <ul>
+        <li>Work</li>
+        <li>Sport</li>
+        <li>Official</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Child</button>
+    <div class="panel">
+      <ul>
+        <li>Girl</li>
+        <li>Boy</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- navigation -->
+  <section class="fixed-top navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" style="width: 90px; height: 60px;"
+            alt="logo"></a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar"
+          aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navbar -->
+        <div class="collapse navbar-collapse text-center" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="showsidenav">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="#Newcollection">New collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">product</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary ml-lg-3 primary-shadow" id="regis1">register</a>
+       
+        </div>
+      </nav>
+    </div>
+  </section>
+  <!-- /navigation -->
+
+  <!-- hero area -->
+  <section class="section-lg hero" data-background="" style="background-image: url(images/hero-area/banner-bg.png);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center zindex-1">
+          <h1 class="mb-3">Choose your favorite<br>
+            shoes now</h1>
+          <p class="mb-4">Experience comfort and beauty with rose shoes.</p>
+          <a href="#" class="btn btn-secondary btn-md " onclick="myFunctionselect() ">  <h4 class="d-inline">Login</h4> <img  class="ml-2" src="images/sneakers.png"
+              style="width: 60px; height: 55px;" alt=""></a>
+          <div id="selectshoes">Please register first</div>
+          <!-- banner image -->
+          <!-- <img class="img-fluid w-100 banner-image" src="images/hero-area/banner-img.png" alt="banner-img"> -->
+        </div>
+      </div>
+    </div>
+    <!-- background shapes -->
+    <div id="scene">
+      <img class="img-fluid hero-bg-1 up-down-animation" src="images/background-shape/feature-bg-2.png" alt="">
+      <img class="img-fluid hero-bg-2 left-right-animation" src="images/background-shape/seo-ball-1.png" alt="">
+      <img class="img-fluid hero-bg-3 left-right-animation" src="images/background-shape/seo-half-cycle.png" alt="">
+      <img class="img-fluid hero-bg-4 up-down-animation" src="images/background-shape/green-dot.png" alt="">
+      <img class="img-fluid hero-bg-5 left-right-animation" src="images/background-shape/blue-half-cycle.png" alt="">
+      <img class="img-fluid hero-bg-6 up-down-animation" src="images/background-shape/seo-ball-1.png" alt="">
+      <img class="img-fluid hero-bg-7 left-right-animation" src="images/background-shape/yellow-triangle.png" alt="">
+      <img class="img-fluid hero-bg-9 up-down-animation" src="images/background-shape/team-bg-triangle.png" alt="">
+    </div>
+  </section>
+  <!-- /hero-area -->
+
+  <!-- swiffy slider product-->
+
+  <div class="container">
+    <div class="row" id="Newcollection">
+      <div class="col-lg-12 text-center">
+        <h3 class="section-title mt-5">New Collection</h3>
+
+      </div>
+    </div>
+  </div>
+  <div class="container mx-5 mt-0 mb-5">
+    <div class="swiffy-slider slider-item-show3 slider-item-reveal slider-nav-dark slider-nav-outside-expand">
+      <ul class="slider-container py-4" id="slider2">
+        <li>
+          <div class="card shadow h-100">
+            <div class="ratio ratio-1x1">
+              <img src="images/shoes/shoes1.jpg" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row">
+              <div class="flex-grow-1">
+                <strong>LeBron 18</strong>
+                <p class="card-text">Basketball Shoes</p>
+              </div>
+              <div class="px-md-2">$200</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card shadow h-100">
+            <div class="ratio ratio-1x1">
+              <img src="images/shoes/shoes2.jpg" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row">
+              <div class="flex-grow-1">
+                <strong>Nike Air Vapormax 2021 FK</strong>
+                <p class="card-text">Women's Shoes</p>
+              </div>
+              <div class="px-md-2">$200</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card shadow h-100">
+            <div class="ratio ratio-1x1">
+              <img src="images/shoes/shoes3.jpg" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row">
+              <div class="flex-grow-1">
+                <strong>Nike Air Force 1 Fontanka</strong>
+                <p class="card-text">Women's Shoes</p>
+              </div>
+              <div class="px-md-2">$110</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card shadow h-100">
+            <div class="ratio ratio-1x1">
+              <img src="images/shoes/shoes4.jpg" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row">
+              <div class="flex-grow-1">
+                <strong>Kyrie 7</strong>
+                <p class="card-text">Basketball Shoes</p>
+              </div>
+              <div class="px-md-2">$130</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card shadow h-100">
+            <div class="ratio ratio-1x1">
+              <img src="images/shoes/shoes5.jpg" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row">
+              <div class="flex-grow-1">
+                <strong>Kyrie 7</strong>
+                <p class="card-text">Big Kids' Basketball Shoes</p>
+              </div>
+              <div class="px-md-2">$110</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card shadow h-100">
+            <div class="ratio ratio-1x1">
+              <img src="images/shoes/shoes6.jpg" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row">
+              <div class="flex-grow-1">
+                <strong>Nike Air Max 90 Premium</strong>
+                <p class="card-text">Men's Shoes</p>
+                <div class="px-md-2">$130</div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card shadow h-100">
+            <div class="ratio ratio-1x1">
+              <img src="images/shoes/shoes7.jpg" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row">
+              <div class="flex-grow-1">
+                <strong>LeBron 18</strong>
+                <p class="card-text">Basketball Shoes</p>
+              </div>
+              <div class="px-md-2">$200</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card shadow h-100">
+            <div class="ratio ratio-1x1">
+              <img src="images/shoes/shoes8.jpg" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row">
+              <div class="flex-grow-1">
+                <strong>Nike Air Vapormax 2021 FK</strong>
+                <p class="card-text">Women's Shoes</p>
+              </div>
+              <div class="px-md-2">$200</div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+      <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
+    </div>
+  </div>
+  <!--/ swiffy slider product-->
+
+
+
+
+
+    <!-- service -->
+    <section class="section-lg service">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-md-5 order-2 order-md-1">
+            <h2 class="section-title">Powerful Layout From Top To Bottom</h2>
+            <p class="mb-4">Far far away, behind the word mountains,
+              far from the countries Vokalia and Consonantia,
+              there live the blind texts. Separated they
+              live in Bookmarksgrove right at the coast of the
+              Semantics, a large language ocean.</p>
+            <ul class="pl-0 service-list">
+              <li><i class="ti-layout-tab-window text-purple"></i>Responsive on any device</li>
+              <li><i class="ti-layout-placeholder text-purple"></i>Very easy to customize</li>
+              <li><i class="ti-support text-purple"></i>Effective support</li>
+            </ul>
+          </div>
+          <div class="col-md-7 order-1 order-md-2">
+            <img class="img-fluid layer-3 ml-5" style="width: 600px; height: 500px;" src="images/shoes/Screenshot 2023-04-02 181050.png" alt="service">
+          </div>
+        </div>
+      </div>
+      <!-- background image -->
+      <img class="img-fluid service-bg" src="images/backgrounds/service-bg.png" alt="service-bg">
+      <!-- background shapes -->
+      <img class="service-bg-shape-1 up-down-animation" src="images/background-shape/service-half-cycle.png"
+        alt="background-shape">
+      <img class="service-bg-shape-2 left-right-animation" src="images/background-shape/feature-bg-2.png"
+        alt="background-shape">
+    </section>
+    <!-- /service -->
+
+
+  <!-- marketing -->
+  <section class="section-lg seo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="seo-image">
+            <img class="img-fluid" src="images/shoes/Screenshot 2023256.png" alt="form-img">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <h2 class="section-title">A Complete Range Of SEO Marketing Services!</h2>
+          <p>Far far away, behind the word mountains, far
+            from the countries Vokalia and Consonantia.<br>
+            There live the blind texts. Separated they
+            live in Bookmarksgrove right at the coast of
+            the Semantics, a large language ocean.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- background image -->
+    <img class="img-fluid seo-bg" src="images/backgrounds/seo-bg.png" alt="seo-bg">
+    <!-- background-shape -->
+    <img class="seo-bg-shape-1 left-right-animation" src="images/background-shape/seo-ball-1.png" alt="bg-shape">
+    <img class="seo-bg-shape-2 up-down-animation" src="images/background-shape/seo-half-cycle.png" alt="bg-shape">
+    <img class="seo-bg-shape-3 left-right-animation" src="images/background-shape/seo-ball-2.png" alt="bg-shape">
+  </section>
+  <!-- /marketing -->
+
+
+
+  <!-- client logo slider -->
+  <section class="section">
+    <div class="container">
+      <div class="client-logo-slider align-self-center">
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-1.png" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-2.png" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-3.png" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-4.png" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-5.png" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-1.png" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-2.png" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-3.png" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-4.png" alt="client-logo"></a>
+        <a href="#" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid"
+            src="images/clients-logo/client-logo-5.png" alt="client-logo"></a>
+      </div>
+    </div>
+  </section>
+  <!-- /client logo slider -->
+
+  <!-- newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Subscribe to our newsletter</h2>
+          <p class="mb-5">Receive updates, news and deals</p>
+        </div>
+        <div class="col-lg-8 col-sm-10 col-12 mx-auto">
+          <form action="#">
+            <div class="input-wrapper position-relative">
+              <form action="http://localhost:3000/newsletter" id="newsletter">
+                <input type="email"  name="email" id="email" class="newsletter-form" placeholder="Enter your email">
+                <button type="submit" value="send" class="btn newsletter-btn">subscribe</button>
+              </form>
+          
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- background shapes -->
+    <img class="newsletter-bg-shape left-right-animation" src="images/background-shape/seo-ball-2.png"
+      alt="background-shape">
+  </section>
+  <!-- /newsletter -->
+
+  <!-- footer -->
+  <footer class="footer-section footer" style="background-image: url(images/backgrounds/footer-bg.png);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+          <!-- logo -->
+          <a href="index.html">
+            <img class="img-fluid" src="images/logo.png" style="width: 170px; height: 120px;" alt="logo">
+          </a>
+        </div>
+        <!-- footer menu -->
+        <nav class="col-lg-8 align-self-center mb-5">
+          <ul class="list-inline text-lg-right text-center footer-menu">
+            <li class="list-inline-item"><a href="index.html">Home</a></li>
+            <li class="list-inline-item"><a class="page-scroll" href="#Newcollection">New collection</a></li>
+            <li class="list-inline-item"><a href="product.html">product</a></li>
+            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- footer social icon -->
+        <nav class="col-12">
+          <ul class="list-inline text-lg-right text-center social-icon">
+            <li class="list-inline-item">
+              <a class="facebook" href="#"><i class="ti-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="twitter" href="#"><i class="ti-twitter-alt"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="linkedin" href="#"><i class="ti-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="black" href="#"><i class="ti-github"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <!--code for modal1-->
+
+  <div class="modal-wrapper d-none " id="dataregister">
+    <div class="modal-register">
+      <span id="closemodal" style="position: absolute; display: block;"><img src="images/close (1).png"
+          style="  text-align: right !important; position: relative; width: 26px; height: 26px; right: 1px; top: 1px ;"
+          alt=""></span>
+      <div class="modal-registerto ">
+        <h4 style="padding: 5px 2px;">Register at Rose Shoes</h4>
+        <form action="http://localhost:3000/sabt3" id="sabt3">
+          <input type="text" name="username" id="username3" class="inputregister" placeholder="UserName">
+          <input type="text" name="email" id="email3" class="inputregister" placeholder="Email">
+          <input type="text" name="phone" id="phone3" class="inputregister" placeholder="Phone">
+          <input type="password" name="password" id="password3" class="inputregister" placeholder="Password">
+          <button type="submit" class="btn btn-primary my-3">register</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- slick slider -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- venobox -->
+  <script src="plugins/Venobox/venobox.min.js"></script>
+  <!-- aos -->
+  <script src="plugins/aos/aos.js"></script>
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+  <!--slider product swiffy-->
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+    defer></script>
+
+
+  <script>
+
+    $(function () {
+
+      $("#showsidenav").click(function () {
+        $("#sidenav").css('right', '0');
+      })
+
+      $("#sc").click(function () {
+        $("#sidenav").css('right', '-300px');
+      })
+    })
+
+
+    $(function () {
+      $("#accordion").accordion({
+        collapsible: true
+      });
+    });
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+
+
+    $(function () {
+      $("#regis1").click(function (event) {
+        event.preventDefault();
+        $("#dataregister").removeClass('d-none');
+      })
+
+
+      $("#closemodal").click(function () {
+        $("#dataregister").addClass('d-none');
+      })
+    })
+
+    function myFunctionselect() {
+      var x = document.getElementById("selectshoes");
+      x.className = "show";
+      setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+    }
+  </script>
+
+  <!--validation for newsletter-->
+
+  <script src="plugins/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+
+  <script>
+
+
+    $("#newsletter").validate({
+
+
+      rules: {
+    
+        email: {
+          required: true,
+          email: true,
+
+        }
+
+      },
+
+     submitHandler: $(function () {
+        $('#newsletter').submit(function (event) {
+          event.preventDefault();
+          let email = $('input[name=email]').val();
+          $.ajax({
+            type: 'POST',
+            url: `http://localhost:3000/newsletter`,
+            data: { email},
+            success: function (response) {
+
+            }
+          })
+        })
+      })
+    }) 
+
+    
+
+   
+  </script>
+
+  <script src="plugins/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+
+  <script>
+     $("#sabt3").validate({
+      rules: {
+        username: {
+          required: true,
+          minlength: 3
+        },
+
+        email: {
+          required: true,
+          email: true,
+
+        },
+
+        password: {
+          required: true,
+          minlength: 6
+        },
+
+        phone: {
+          required: true,
+          phone: true
+        }
+      },
+
+
+      submitHandler: $(function () {
+        $('#sabt3').submit(function (event) {
+          event.preventDefault();
+          let username = $('input[name=username]').val();
+          let email = $('input[name=email]').val();
+          let phone = $('input[name=phone]').val();
+          let password = $('input[name=password]').val();
+          $.ajax({
+            type: 'POST',
+            url: `http://localhost:3000/sabt3`,
+            data: { username, email, phone, password },
+            success: function (responsive) {
+
+            }
+          })
+        })
+      })
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Official",
+      "model": "Air Max 90",
+      "color": "3",
+      "price": "€118.97",
+      "img": "images/shoes/shoes1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sport",
+      "model": " Max TW SE",
+      "color": "5",
+      "price": "€168.47",
+      "img": "images/shoes/shoes2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Sport",
+      "model": " Max TW SZ",
+      "color": "2",
+      "price": "€208.88",
+      "img": "images/shoes/shoes3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sport",
+      "model": "pro max LL",
+      "color": "5",
+      "price": "€212.07",
+      "img": "images/shoes/shoes4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Sport",
+      "model": "Jordan 1 Mid SE",
+      "color": "4",
+      "price": "€119.00",
+      "img": "images/shoes/shoes5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Sport",
+      "model": "Air Max Plus PRM",
+      "color": "3",
+      "price": "€179.23",
+      "img": "images/shoes/shoes6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Official",
+      "model": " React Vision",
+      "color": "6",
+      "price": "€234.58",
+      "img": "images/shoes/shoes7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Sport",
+      "model": " Air Max 95",
+      "color": "4",
+      "price": "€234.58",
+      "img": "images/shoes/shoes8.jpg"
+    }
+  ],
+  "contact": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "name": "sara",
+      "email": "zakiehmobaraky10@gmail.com",
+      "subject": "subject43",
+      "id": 1
+    },
+    {
+      "name": "saman",
+      "email": "saman10@gmail.com",
+      "subject": "subject90",
+      "id": 2
+    }
+  ],
+  "newsletter": [
+    {
+      "email": "typicode"
+    }
+  ],
+  "sabt3": [
+    {
+      "username": "",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "id": 1
+    },
+    {
+      "username": "maya97303",
+      "email": "zakiehmobaraky10@gmail.com",
+      "phone": "09381290737",
+      "password": "",
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "email": "zakiehmobaraky10@gmail.com",
+      "phone": "09381290737",
+      "password": "",
+      "id": 3
+    },
+    {
+      "username": "admin",
+      "email": "saman10@gmail.com",
+      "phone": "09381290700",
+      "password": "",
+      "id": 4
+    }
+  ]
+}

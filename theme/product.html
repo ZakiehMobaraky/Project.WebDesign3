@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dtox</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- ** Plugins Needed for the Project ** -->
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="plugins/Venobox/venobox.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!--toste dasti ba css-->
+  <style>
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-image: linear-gradient(25deg, rgb(23, 255, 211) 0%, rgb(211, 252, 113) 95%);
+      color: #091337;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+
+
+  #snackbar2 {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-image: linear-gradient(25deg, rgb(23, 255, 211) 0%, rgb(211, 252, 113) 95%);
+      color: #091337;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar2.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  </style>
+ 
+
+
+
+  <style>
+    .stylecard1 {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border: 1px solid transparent;
+      border-radius: 6px !important;
+    }
+
+
+
+
+     
+    .modal-wrapper {
+      background-color: rgba(123, 223, 227, 0.694);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: 2000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .modal-register {
+      width: 550px;
+      height: 450px;
+      background-color: white;
+      border: 5px solid white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+
+    }
+
+    .modal-registerto {
+      width: 450px;
+      height: 250px;
+      background-color: white;
+      border: 5px solid white;
+      padding: 2px;
+      align-items: center;
+
+    }
+
+    .inputregister {
+      display: block;
+      padding: 4px 8px;
+      border-radius: 5px;
+      margin: 18px 5px;
+      width: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- tost dasti css -->
+
+  <div id="snackbar"><strong>Added to your shopping cart</strong> </div>
+
+  <!-- tost dasti css2 -->
+  <div id="snackbar2"><strong>Added to your favorites.</strong> </div>
+
+
+
+  <!-- navigation -->
+  <section class="fixed-top navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" style="width: 90px; height: 60px;"
+            alt="logo"></a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar"
+          aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navbar -->
+        <div class="collapse navbar-collapse text-center" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="#Newcollection">New collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Product</a>
+            </li>
+      
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary ml-lg-3 primary-shadow" id="regis1">register</a>
+          <a href="#" class="btn btn-primary ml-lg-3 primary-shadow">Login</a>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <!-- /navigation -->
+
+  <!-- about us -->
+  <section class="section-lg about ">
+    <div class="container">
+
+      <div class="row m-4 g-5" id="users">
+
+      </div>
+
+    </div>
+    <!-- background shapes -->
+    <img src="images/background-shape/green-dot.png" alt="background-shape" class="about-bg-1 up-down-animation">
+    <img src="images/background-shape/blue-dot.png" alt="background-shape" class="about-bg-2 left-right-animation">
+    <img src="images/background-shape/green-half-cycle.png" alt="background-shape" class="about-bg-3 up-down-animation">
+    <img src="images/background-shape/seo-ball-1.png" alt="background-shape" class="about-bg-4 left-right-animation">
+    <img src="images/background-shape/team-bg-triangle.png" alt="background-shape" class="about-bg-5 up-down-animation">
+    <img src="images/background-shape/service-half-cycle.png" alt="background-shape"
+      class="about-bg-6 left-right-animation">
+  </section>
+  <!-- /about us -->
+
+  <!-- product -->
+  <section class="section product" style="background-image: url(images/backgrounds/about-bg.png);">
+
+    <!-- our vision -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="section-title">Our Vision</h2>
+            <p>Far far away, behind the word mountains,
+              far from the countries Vokalia and Consonantia,
+              there live the blind texts. Separated they
+              live in Bookmarksgrove right at the coast of the
+              Semantics, a large language ocean.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="images/shoes/Screenshot3.png" alt="vision" class="img-fluid w-100">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /our vision -->
+
+  </section>
+  <!-- /product -->
+
+
+  <!-- footer -->
+  <footer class="footer-section footer" style="background-image: url(images/backgrounds/footer-bg.png);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+          <!-- logo -->
+          <a href="index.html">
+            <img class="img-fluid" src="images/logo.png" alt="logo">
+          </a>
+        </div>
+        <!-- footer menu -->
+        <nav class="col-lg-8 align-self-center mb-5">
+          <ul class="list-inline text-lg-right text-center footer-menu">
+            <li class="list-inline-item active"><a href="index.html">Home</a></li>
+            <li class="list-inline-item"><a class="page-scroll" href="#newcollection">New collection</a></li>
+            <li class="list-inline-item"><a href="product.html">product</a></li>
+            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- footer social icon -->
+        <nav class="col-12">
+          <ul class="list-inline text-lg-right text-center social-icon">
+            <li class="list-inline-item">
+              <a class="facebook" href="#"><i class="ti-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="twitter" href="#"><i class="ti-twitter-alt"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="linkedin" href="#"><i class="ti-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="black" href="#"><i class="ti-github"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+   <!--code for modal1-->
+
+   <div class="modal-wrapper d-none " id="dataregister">
+    <div class="modal-register">
+      <span id="closemodal" style="position: absolute; display: block;"><img src="images/close (1).png"
+          style="  text-align: right !important; position: relative; width: 26px; height: 26px; right: 1px; top: 1px ;"
+          alt=""></span>
+      <div class="modal-registerto ">
+        <h4 style="padding: 5px 2px;">Register at Rose Shoes</h4>
+        <form action="" id="regiser">
+          <input type="text" name="username" class="inputregister" placeholder="UserName">
+          <input type="text" name="email" class="inputregister" placeholder="Email">
+          <input type="text" name="phone" class="inputregister" placeholder="Phone">
+          <input type="password" name="Password" class="inputregister" placeholder="Password">
+          <button type="submit" class="btn btn-primary my-3">register</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- slick slider -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- venobox -->
+  <script src="plugins/Venobox/venobox.min.js"></script>
+  <!-- aos -->
+  <script src="plugins/aos/aos.js"></script>
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <!-- tost dasti ba css  -->
+    <script>
+      function myFunctiontost() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      }
+      </script>
+
+<script>
+  function myFunctiontost2() {
+    var x = document.getElementById("snackbar2");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+  </script>
+
+
+  <script>
+
+    $(function () {
+      deleteAndShowLastData();
+
+
+      $('body').on('click', 'button', function () {
+        let id = $(this).attr('data-id');
+        let element = $(this);
+        $.ajax({
+          type: 'DELETE',
+          url: `http://localhost:3000/users/${id}`,
+          success: function (response) {
+            deleteAndShowLastData();
+
+            element.parent().remove()
+          }
+        })
+      });
+
+
+      function deleteAndShowLastData() {
+        $('#users').empty();
+        $.ajax({
+          type: 'GET',
+          url: `http://localhost:3000/users`,
+          success: function (response) {
+
+
+            response.forEach(function (item) {
+              $('#users').append(`
+                                 
+                    <div class="col-12 col-md-3 c0l-lg-4 mb-30" >
+                             
+<div class="card stylecard1">
+    <img class="card-img-top w-100 d-block bg-cover " src="${item.img}">
+    <div class="card-body ">
+        <h4 class="card-title">${item.name}</h4>
+        <p class="card-text mb-0">${item.model}</p>
+        <p class="card-text mb-0"> <strong>color:</strong>${item.color}</p>
+        <p class="card-text"><strong>price:</strong>${item.price}</p>
+        <div style="text-align: center;">
+
+            <a href="#"  onclick="myFunctiontost()" class="btn2f btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg></a>
+            <a href="product2.html" class="btn2f btn-secondary"><svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                    <path
+                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                </svg>view</a>
+
+            <a href="#" onclick="myFunctiontost2()" class="btn2f btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg></a>
+        </div>
+
+    </div>
+
+</div>
+                    </div>
+                   
+
+                  
+                    `);
+            });
+          }
+        })
+      }
+
+    })
+
+  </script>
+  <script>
+       $(function () {
+      $("#regis1").click(function (event) {
+        event.preventDefault();
+        $("#dataregister").removeClass('d-none');
+      })
+
+
+      $("#closemodal").click(function () {
+        $("#dataregister").addClass('d-none');
+      })
+    })
+  </script>
+
+</body>
+
+
+</html>
